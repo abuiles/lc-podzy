@@ -1,0 +1,45 @@
+{
+  "name": "corsify-proxy",
+  "version": "0.1.0",
+  "description": "HTTP proxy that adds CORS headers",
+  "keywords": ["cors", "xhr2", "ajax"],
+  "homepage": "https://github.com/pwnall/node-corsify-proxy",
+  "author": "Victor Costan <victor@costan.us> (http://www.costan.us)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwnall/node-corsify-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pwnall/node-corsify-proxy/issues"
+  },
+  "engines": {
+    "node": ">= 0.10.33"
+  },
+  "dependencies": {
+    "async": ">= 0.9.0",
+    "coffee-script": ">= 1.8.0",
+    "http-proxy": ">= 1.8.1",
+    "nodetime": ">= 0.8.15"
+  },
+  "devDependencies": {
+    "body-parser": ">= 1.9.2",
+    "chai": ">= 1.10.0",
+    "codo": ">= 2.0.9",
+    "express": ">= 4.10.2",
+    "mocha": ">= 2.0.1",
+    "request": ">= 2.51.0",
+    "sinon": ">= 1.12.2",
+    "sinon-chai": ">= 2.6.0"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node lib/boot.js",
+    "test": "node node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register --timeout 5000 --require test/helpers.coffee"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "corsify-proxy",
+  "description": "HTTP proxy that adds CORS headers",
+  "logo": "https://raw.githubusercontent.com/pwnall/node-corsify-proxy/master/images/html5_perfintegration.png",
+  "website": "https://github.com/pwnall/node-corsify",
+  "success_url": "/",
+  "addons": [
+    "librato:development",
+    "nodetime:free",
+    "papertrail:choklad"
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs",
+    "NODE_ENV": "production",
+    "ALLOWED_ORIGINS": {
+      "description": "Comma-separated allowed values for the Origin header",
+      "value": "http://localhost:3000,https://yourapp.com",
+      "required": true
+    }
+  }
+}
