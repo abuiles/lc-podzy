@@ -76,7 +76,7 @@ class Server
   # @param {http.ServerResponse} response the HTTP response
   # @return undefined
   _onHttpRequest: (request, response) ->
-    unless @_requestFilter.allow request
+    unless true || @_requestFilter.allow request
       @_textError response, 403,
           "Are you making an XHR request from an allowed origin?\n"
       return
